@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+nav > a{ /*así le digo que aplique esto solo a los a que estan dentro de nav*/
+    margin-left: 15px;
+}
+.hamburguesa{
+    color: black;
+    display: none; /*no quiero que aparezca en pantallas grandes, solo en chicas*/
+    cursor: pointer;
+    font-size: 32px;
+}
+
+@media(max-width: 500px){
+    nav{
+       /* visibility:hidden; con esto lo oculto*/ 
+    display: none; /*no quiero que aparezca en pantallas chicas*/
+    }
+    .redes{
+        display: none;
+    }
+    .hamburguesa{
+        display: block;
+    }
+    header{
+        flex-direction: column;
+    }
+    .contenedorimgtext{
+        flex-direction: column;
+    }
+}
+.contenedorhero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(90deg, rgba(37,21,75,0.4) 15%, rgba(17,11,87,0.4) 57%, rgba(43,105,117,0.4) 100%), url(./imagenes/imagen2.jpg); 
+    background-size: cover
+    /*background-position: center center*/;
+    
+}
+.titulohero{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: white;
+    padding: 1.5rem 0; 
+    text-align: center;
+}
+.textohero{
+    font-size: 1rem;
+    color: white;
+    max-width: 50%;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+button{
+   padding: 0.9rem 1.6rem;
+   border: 1px solid white;
+   color: rgb(127, 161, 150);
+   font-size: 1.25rem;
+   text-transform: uppercase;
+   background-color: white;
+   cursor: pointer;
+
+}
+ button:hover{
+    background: transparent;
+    border-color: blanchedalmond;
+    color: black;
+    
+ }
+ .logo{
+    -webkit-text-stroke: 1px rgb(85, 130, 130);
+ }
+
+ img{
+     width:30%;
+ }
+ .contenedorimgtext{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+ }
+ .btnabout{
+    background-color: rgb(127, 161, 150);
+    padding: 0.9rem 1.6rem;
+    border: 1px solid white;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 15px;
+ }
+ .textoprincipal{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 50px 0;
+    letter-spacing: 0.5rem;
+    font-size: 2rem;
+ }
+ span{
+    color: rgb(127, 161, 150);
+ }
+ .contenedortextabout{
+    width: 50%;
+    margin-left: 3.5rem;
+ }
+ .textabout{
+    font-size: 1rem;
+    margin: 15px;
+ }
+ .explore{
+    margin: 15px;
+ }
+ .about{
+    padding-bottom: 3.5rem;
+ }
+ .servicios{
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ .contenedorservicios{
+    display: flex;
+    width: 75%;
+   
+ }
+
+.contenedortextoservicios{
+    margin-left: 1rem;
+    
+}
+
+.coloricono{
+    font-size: 2rem;
+    background-color: aquamarine;
+    padding: 15px;
+    height: 30px;
+    color: rgb(127, 161, 150);
+
+}
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+}
+.fotogaleria{
+    width: 25%;
+}
+@media (max-width: 900px){
+    .fotogaleria{
+        flex-basis: 50%;
+    }
+    
+}
+@media (max-width: 500px){
+    .fotogaleria{
+        flex-basis: 100%;
+    }
+    
+}
+/*puedo usar root para definir la variable color, es una buena pr{actica para hacer modificaciones con facilidad*/
